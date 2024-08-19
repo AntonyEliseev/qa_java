@@ -8,14 +8,14 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
-public class LionTestParam {
+public class LionParamTest {
 
     @Mock
     Feline feline;
     private final String sex;
     private final boolean result;
 
-    public LionTestParam(String sex, boolean result) {
+    public LionParamTest(String sex, boolean result) {
         this.sex = sex;
         this.result = result;
     }
@@ -37,6 +37,5 @@ public class LionTestParam {
     public void doesHaveManeParamTest() throws Exception {
         Lion lion = new Lion(sex, feline);
         assertEquals(result, lion.doesHaveMane());
-
     }
 }
